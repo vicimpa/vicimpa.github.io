@@ -5,7 +5,8 @@ const narrowScreen = window.matchMedia("(max-width: 760px)");
 function selectProject(selectedButton) {
   projectButtons.forEach((button, index) => {
     const selected = button === selectedButton;
-    button.setAttribute("aria-pressed", String(selected));
+    if (selected) button.setAttribute("aria-current", "true");
+    else button.removeAttribute("aria-current");
     projectPanels[index].hidden = !selected;
   });
 }
@@ -13,7 +14,9 @@ function selectProject(selectedButton) {
 selectProject(projectButtons[0]);
 document.documentElement.classList.add("js");
 projectButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
     selectProject(button);
     if (narrowScreen.matches) {
       const panel = projectPanels[index];
@@ -24,6 +27,20 @@ projectButtons.forEach((button, index) => {
   });
 });
 
+const english = document.documentElement.lang === "en";
+const terrainText = english ? {
+  types: ["Swamp", "Sand", "Rock", "Mountains"],
+  notes: ["Vehicles cannot cross this tile.", "Vehicles can pass, but you cannot build here.", "You can place your HQ here.", "Mountains are impassable."],
+  plan: "PLAN", terrain: "TERRAIN",
+  ready: seed => `Map ${seed} is ready. Find a rock tile.`,
+  placed: (x, y) => `HQ placed · X ${x}, Y ${y}.`
+} : {
+  types: ["Топь", "Песок", "Камень", "Горы"],
+  notes: ["Техника сюда не пройдёт.", "Техника может проехать, строить нельзя.", "Здесь можно поставить штаб.", "Горы непроходимы."],
+  plan: "ПЛАН", terrain: "РЕЛЬЕФ",
+  ready: seed => `Карта ${seed} готова. Найди каменную клетку.`,
+  placed: (x, y) => `Штаб установлен · X ${x}, Y ${y}.`
+};
 const canvas = document.getElementById("terrain");
 const context = canvas.getContext("2d");
 if (context) setupTerrain(canvas, context);
@@ -36,10 +53,10 @@ function setupTerrain(canvas, context) {
   const viewButton = document.getElementById("view");
   const status = document.getElementById("terrain-status");
   const land = [
-    { name: "Топь", top: "#80b0a0", side: "#4c766a", level: 0, note: "Техника сюда не пройдёт." },
-    { name: "Песок", top: "#f2bf72", side: "#ad7946", level: 1, note: "Техника может проехать, строить нельзя." },
-    { name: "Камень", top: "#b1c390", side: "#6d8056", level: 3, note: "Здесь можно поставить штаб." },
-    { name: "Горы", top: "#e7e2c7", side: "#a69e7f", level: 6, note: "Горы непроходимы." }
+    { name: terrainText.types[0], top: "#80b0a0", side: "#4c766a", level: 0, note: terrainText.notes[0] },
+    { name: terrainText.types[1], top: "#f2bf72", side: "#ad7946", level: 1, note: terrainText.notes[1] },
+    { name: terrainText.types[2], top: "#b1c390", side: "#6d8056", level: 3, note: terrainText.notes[2] },
+    { name: terrainText.types[3], top: "#e7e2c7", side: "#a69e7f", level: 6, note: terrainText.notes[3] }
   ];
   let cells;
   let faces;
@@ -143,7 +160,7 @@ function setupTerrain(canvas, context) {
 
     context.font = "bold 12px monospace";
     context.fillStyle = "#d7ddc7";
-    context.fillText(topDown ? "ПЛАН" : "РЕЛЬЕФ", 25, 34);
+    context.fillText(topDown ? terrainText.plan : terrainText.terrain, 25, 34);
     context.fillText("N ↑", 703, 34);
     context.fillText(selection ? `X ${selection.x + 1} · Y ${selection.y + 1}` : "X — · Y —", 25, 431);
   }
@@ -154,7 +171,7 @@ function setupTerrain(canvas, context) {
     faces = getFaces();
     selection = null;
     base = null;
-    if (!initial) status.textContent = `Карта ${seed} готова. Найди каменную клетку.`;
+    if (!initial) status.textContent = terrainText.ready(seed);
     draw();
   }
 
@@ -162,7 +179,7 @@ function setupTerrain(canvas, context) {
     selection = cell;
     if (place && cell.kind === land[2]) {
       base = cell;
-      status.textContent = `Штаб установлен · X ${cell.x + 1}, Y ${cell.y + 1}.`;
+      status.textContent = terrainText.placed(cell.x + 1, cell.y + 1);
     } else {
       status.textContent = `${cell.kind.name}. ${cell.kind.note}`;
     }

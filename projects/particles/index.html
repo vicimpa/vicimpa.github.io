@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#222824">
+<title>GPU particles — Логотип из частиц на GPU | PromiSe####</title>
+<meta name="description" content="Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.">
+<meta name="author" content="Роман Аленичев / PromiSe####">
+<link rel="canonical" href="https://vicimpa.github.io/projects/particles/">
+<link rel="alternate" hreflang="ru" href="https://vicimpa.github.io/projects/particles/">
+<link rel="alternate" hreflang="en" href="https://vicimpa.github.io/en/projects/particles/">
+<link rel="alternate" hreflang="x-default" href="https://vicimpa.github.io/projects/particles/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GPU particles — Логотип из частиц на GPU | PromiSe####">
+<meta property="og:description" content="Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.">
+<meta property="og:url" content="https://vicimpa.github.io/projects/particles/">
+<meta property="og:site_name" content="PromiSe#### / Цех">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://vicimpa.github.io/assets/avatar.png">
+<meta property="og:image:alt" content="GPU particles">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GPU particles — Логотип из частиц на GPU | PromiSe####">
+<meta name="twitter:description" content="Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.">
+<meta name="twitter:image" content="https://vicimpa.github.io/assets/avatar.png">
+<link rel="icon" href="/assets/avatar.png" type="image/png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://vicimpa.github.io/#person", "name": "Роман Аленичев", "alternateName": ["PromiSe####", "vicimpa"], "url": "https://vicimpa.github.io/", "image": "https://vicimpa.github.io/assets/avatar.png", "jobTitle": "Senior Fullstack TypeScript Developer", "sameAs": ["https://github.com/vicimpa", "https://career.habr.com/vic_dev", "https://t.me/vic_dev"], "knowsAbout": ["TypeScript", "WebGL", "Web Audio", "Bun", "React", "SvelteKit"]}, {"@type": "WebSite", "@id": "https://vicimpa.github.io/#website", "url": "https://vicimpa.github.io/", "name": "PromiSe#### / Цех", "inLanguage": ["ru", "en"]}, {"@type": "WebPage", "@id": "https://vicimpa.github.io/projects/particles/#page", "url": "https://vicimpa.github.io/projects/particles/", "name": "GPU particles — Логотип из частиц на GPU | PromiSe####", "description": "Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.", "inLanguage": "ru", "isPartOf": {"@id": "https://vicimpa.github.io/#website"}, "about": {"@id": "https://vicimpa.github.io/#person"}, "mainEntity": {"@id": "https://vicimpa.github.io/projects/particles/#project"}}, {"@type": "CreativeWork", "@id": "https://vicimpa.github.io/projects/particles/#project", "name": "GPU particles", "description": "Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.", "url": "https://vicimpa.github.io/projects/particles/", "inLanguage": "ru", "sameAs": "https://github.com/vicimpa/webgl-logo-particle"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Цех", "item": "https://vicimpa.github.io/"}, {"@type": "ListItem", "position": 2, "name": "GPU particles", "item": "https://vicimpa.github.io/projects/particles/"}]}]}</script>
+</head>
+<body><a class="skip" href="#content">К содержимому</a>
+<header class="top" id="top"><div class="frame bar">
+<a class="brand" href="/"><img src="/assets/avatar.png" alt="" width="32" height="32"> PromiSe####<span>/ ЦЕХ</span></a>
+<nav aria-label="Проекты"><a href="/#field">Полигон</a><a href="/#work">Верстак</a><a href="/#about">Автор</a></nav>
+<nav class="languages" aria-label="Язык сайта"><a href="/projects/particles/" lang="ru" hreflang="ru" aria-current="page">RU</a><a href="/en/projects/particles/" lang="en" hreflang="en">EN</a></nav>
+</div></header><main id="content"><article class="case-page frame">
+<a class="jump" href="/#work">← Все проекты</a>
+<p class="mono case-label">О проекте / GPU particles</p>
+<h1>GPU particles<span>.</span></h1>
+<p class="case-subtitle">Логотип из частиц на GPU</p>
+<div class="case-grid"><div class="case-copy"><p>Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.</p><div class="tags"><span>WebGL2</span><span>GLSL</span><span>Transform Feedback</span></div><div class="project-actions"><a class="inline" href="https://github.com/vicimpa/webgl-logo-particle">Исходный код ↗</a></div>
+<h2>Что внутри</h2><p>Вычисления состояний частиц выполняются на GPU через Transform Feedback.</p><p>Отдельные шейдеры отвечают за инициализацию, симуляцию и отрисовку. Частицы отталкиваются от курсора и возвращаются к исходным координатам.</p>
+<nav class="related" aria-label="Ещё на верстаке"><h3>Ещё на верстаке</h3><a href="/projects/toolkit/">vicimpa-library →</a><a href="/projects/graph-calc/">GraphCalc →</a></nav></div><div class="art art-particles" aria-hidden="true"><span>FIG. 06 · PARTICLE STUDY</span><svg viewBox="0 0 310 170" fill="none" stroke="currentColor"><ellipse cx="155" cy="85" rx="120" ry="34" transform="rotate(-16 155 85)" opacity=".3"/><ellipse cx="155" cy="85" rx="103" ry="55" transform="rotate(23 155 85)" stroke-dasharray="2 7"/><path d="M104 49l49 82 53-82" stroke-width="14" stroke-linecap="round" stroke-dasharray=".1 8"/><path d="M63 61h.1m9 48h.1m20-4h.1m18-72h.1m69 14h.1m55 9h.1m7 45h.1m16 17h.1m-61 22h.1m-80-5h.1m12 10h.1m107-62h.1m-35 31h.1m-66-84h.1" stroke-width="4" stroke-linecap="round"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div></div></article></main><footer class="contact" id="contact"><div class="frame">
+<div class="section-index mono"><span>04 / КОНТАКТЫ</span><a href="#top">НАВЕРХ ↑</a></div>
+<div class="contact-grid"><h2>На связи<span>.</span></h2><div class="contact-links">
+<a href="https://t.me/vic_dev">Telegram <span>Написать мне ↗</span></a>
+<a href="https://github.com/vicimpa">GitHub <span>Код и проекты ↗</span></a>
+<a href="https://career.habr.com/vic_dev">Хабр Карьера <span>Профиль ↗</span></a>
+<a href="https://discord.gg/hellcord">HellCord <span>Сообщество ↗</span></a></div></div>
+<div class="credits mono"><span>Роман Аленичев / PromiSe####</span><span>КОНЕЦ СМЕНЫ ■</span></div></div></footer></body></html>

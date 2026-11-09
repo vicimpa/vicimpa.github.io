@@ -1,0 +1,348 @@
+[
+  {
+    "id": "pixprite",
+    "name": "Pixprite",
+    "repository": "https://github.com/vicimpa/pixprite",
+    "tags": [
+      "GAME RIG",
+      "TAURI",
+      "MCP"
+    ],
+    "ru": {
+      "title": "Редактор, который вырос из игрового рига",
+      "description": "Я хотел делать персонажей с игровым ригом и передавать их в движок в своём формате. Из этой задачи вырос Pixprite — редактор пиксель-арта и анимации для браузера и десктопа. Game rig уже работает. Дальше хочу добавить нодовый редактор для процедурных спрайтов.",
+      "details": [
+        "Изначальная задача редактора — создавать персонажей с игровым ригом и передавать их в собственный движок.",
+        "Десктопная версия на Tauri работает на macOS, Windows и Linux. Локальный MCP-сервер позволяет совместимым инструментам читать и редактировать документы."
+      ]
+    },
+    "en": {
+      "title": "Pixel art, animation and a game rig",
+      "description": "Pixprite grew out of a need to create characters with a game rig and pass them to my engine in a format I could control. It now runs in the browser and on desktop, with layers, animation frames, tilemaps and extensions.",
+      "details": [
+        "The game rig was the original reason for building the editor.",
+        "The Tauri desktop app supports macOS, Windows and Linux. A local MCP server lets compatible tools inspect and edit documents."
+      ]
+    },
+    "demo": "https://vicimpa.github.io/pixprite/",
+    "image": "pixprite.png",
+    "image_width": 1440,
+    "image_height": 960
+  },
+  {
+    "id": "kharos",
+    "name": "Kharos",
+    "repository": "https://github.com/vicimpa/kharos",
+    "tags": [
+      "RTS",
+      "Procedural generation"
+    ],
+    "ru": {
+      "title": "Стратегия, где рельеф меняет тактику",
+      "description": "Многопользовательская браузерная RTS с процедурной картой, экономикой и логистикой. На каменном плато можно строить, а песок ограничивает движение техники. Графика и звук генерируются кодом.",
+      "details": [
+        "Рельеф, маршруты и ресурсы определяют, где расположить базу.",
+        "Карта на главной странице этого портфолио — самостоятельный этюд по мотивам Kharos."
+      ]
+    },
+    "en": {
+      "title": "A strategy game shaped by its terrain",
+      "description": "A multiplayer browser RTS with a procedural map, economy and logistics. Rock plateaus provide building space, while sand affects vehicle movement. Graphics and sound are generated in code.",
+      "details": [
+        "Terrain, routes and resources shape the placement of a base.",
+        "The interactive map on this portfolio is a separate study inspired by Kharos."
+      ]
+    }
+  },
+  {
+    "id": "openbomber",
+    "name": "OpenBomber",
+    "repository": "https://github.com/vicimpa/openbomber",
+    "tags": [
+      "Multiplayer",
+      "Discord Activities"
+    ],
+    "ru": {
+      "title": "Свой Bomberman с мультиплеером",
+      "description": "OpenBomber — браузерная игра с бомбами, разрушаемыми стенами и усилениями. Можно зайти на общую арену или создать комнату для друзей.",
+      "details": [
+        "В актуальной версии есть общая арена до 32 игроков, боты, комнаты для друзей и запуск через Discord Activities.",
+        "Можно играть с клавиатуры, геймпада или телефона. Размер арены меняется вместе с количеством игроков."
+      ]
+    },
+    "en": {
+      "title": "Multiplayer Bomberman in the browser",
+      "description": "OpenBomber brings bombs, destructible walls and power-ups to a shared browser arena. Players can join public games or create rooms for friends.",
+      "details": [
+        "The current project supports arenas for up to 32 players, bots and Discord Activities.",
+        "Keyboard, gamepad and touch controls make the same game playable on different devices."
+      ]
+    },
+    "demo": "https://openbomber.ru/"
+  },
+  {
+    "id": "toolkit",
+    "name": "vicimpa-library",
+    "repository": "https://github.com/vicimpa/vicimpa-library",
+    "tags": [
+      "TYPESCRIPT",
+      "NPM"
+    ],
+    "ru": {
+      "title": "Библиотеки, которые забираю из проекта в проект",
+      "description": "В одном репозитории собираю самостоятельные TypeScript-пакеты. В glm лежит математика для графики, rsp связывает React-компоненты с сигналами, а keyboard читает кнопки и оси ввода для игрового цикла.",
+      "details": [
+        "Пакеты покрывают работу с бинарными данными, сериализацию, события, перетаскивание и наблюдение за DOM.",
+        "Монорепозиторий объединяет поддержку библиотек и их публикацию в npm."
+      ]
+    },
+    "en": {
+      "title": "Reusable TypeScript building blocks",
+      "description": "A monorepo for my TypeScript packages. The glm package handles graphics math, rsp connects React props to signals, and keyboard provides button states and input axes for game loops.",
+      "details": [
+        "Other packages cover binary data, serialization, events, drag interactions and observers.",
+        "The monorepo groups maintenance and npm publishing in one place."
+      ]
+    }
+  },
+  {
+    "id": "citylabs",
+    "name": "City Labs",
+    "repository": "https://github.com/hellcord/city-labs",
+    "tags": [
+      "Procedural generation",
+      "MCP"
+    ],
+    "ru": {
+      "title": "Город, собранный по правилам",
+      "description": "City Labs — генератор городов из HellCord. Я показывал проект в ролике про карту 9 × 9 км с тысячами зданий и управление генератором через MCP.",
+      "details": [
+        "В проекте пересекаются процедурная графика и инструменты управления сгенерированной сценой.",
+        "Репозиторий размещён в организации HellCord."
+      ]
+    },
+    "en": {
+      "title": "A city generated from rules",
+      "description": "City Labs is a procedural city generator from HellCord. I featured it in a video about a 9 × 9 km map with thousands of buildings and MCP control.",
+      "details": [
+        "This project connects procedural graphics with tools for controlling a generated scene.",
+        "The repository lives in the HellCord organization."
+      ]
+    }
+  },
+  {
+    "id": "particles",
+    "name": "GPU particles",
+    "repository": "https://github.com/vicimpa/webgl-logo-particle",
+    "tags": [
+      "WebGL2",
+      "GLSL",
+      "Transform Feedback"
+    ],
+    "ru": {
+      "title": "Логотип из частиц на GPU",
+      "description": "Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.",
+      "details": [
+        "Вычисления состояний частиц выполняются на GPU через Transform Feedback.",
+        "Отдельные шейдеры отвечают за инициализацию, симуляцию и отрисовку. Частицы отталкиваются от курсора и возвращаются к исходным координатам."
+      ]
+    },
+    "en": {
+      "title": "A logo simulated on the GPU",
+      "description": "A WebGL2 experiment that turns an image into particles. They move away from the pointer and are attracted back to their original positions.",
+      "details": [
+        "Transform Feedback updates particle data on the GPU.",
+        "Separate initialization, simulation and rendering shaders handle the animation."
+      ]
+    }
+  },
+  {
+    "id": "audio",
+    "name": "WebAudio Playground",
+    "repository": "https://github.com/vicimpa/webaudio-playground",
+    "tags": [
+      "Web Audio API"
+    ],
+    "ru": {
+      "title": "Песочница для звука в браузере",
+      "description": "WebAudio Playground — небольшой проект для экспериментов с Web Audio API. На стыке двух моих занятий, разработки и работы со звуком.",
+      "details": [
+        "В репозитории собраны эксперименты с обработкой звука в браузере.",
+        "Более крупный проект в этом направлении — модульный синтезатор WebAudio Nodes."
+      ]
+    },
+    "en": {
+      "title": "A browser playground for sound",
+      "description": "A small project for experiments with the Web Audio API, combining my interest in programming with my background in sound engineering.",
+      "details": [
+        "This repository explores working with audio in the browser.",
+        "For a larger node-based instrument, take a look at WebAudio Nodes."
+      ]
+    }
+  },
+  {
+    "id": "hellcord",
+    "name": "HellCord",
+    "repository": "https://github.com/hellcord",
+    "tags": [
+      "DISCORD",
+      "OPEN SOURCE"
+    ],
+    "ru": {
+      "title": "IT-преисподняя без догм",
+      "description": "В 2021 году мы запустили открытое IT-сообщество в Discord. Сейчас я помогаю рассказывать о HellCord и делаю короткие видео о звуке, коде и проектах участников.",
+      "details": [
+        "У сообщества есть открытые репозитории с инструментами, играми и экспериментами участников.",
+        "В Discord можно познакомиться с другими разработчиками и обсудить свою работу."
+      ]
+    },
+    "en": {
+      "title": "An open IT community",
+      "description": "We started HellCord in 2021 as an open Discord community. I help people discover it and make short videos about sound, code and projects built by its members.",
+      "details": [
+        "Community projects include tools, games and experiments shared on GitHub.",
+        "The Discord server is a place to meet other developers and discuss what you are building."
+      ]
+    },
+    "demo": "https://discord.gg/hellcord"
+  },
+  {
+    "id": "w-nodes",
+    "name": "WebAudio Nodes",
+    "repository": "https://github.com/vicimpa/w-nodes",
+    "tags": [
+      "Web Audio",
+      "AudioWorklet",
+      "MIDI"
+    ],
+    "ru": {
+      "title": "Модульный синтезатор из нод и проводов",
+      "description": "В WebAudio Nodes звук собирается из генераторов, фильтров, секвенсоров и сэмплеров. Управляющие сигналы обрабатываются с частотой аудио. Из группы нод можно сделать собственный блок с входами и выходами.",
+      "details": [
+        "Expression разбирает формулу собственным парсером и компилирует её в AudioWorklet. Поддерживаются предыдущий сэмпл, входные сигналы и математические функции.",
+        "Есть MIDI-клавиатуры, сэмплер, запись, медиатека, автосохранение и файлы .wnodes. Блоки можно вкладывать друг в друга.",
+        "Проект построен на React, TypeScript и сигналах. Дизайн нод — по макету CUSTOMITY."
+      ]
+    },
+    "en": {
+      "title": "A modular synthesizer made of nodes and cables",
+      "description": "WebAudio Nodes connects oscillators, filters, sequencers and samplers into a browser instrument. Control signals run at audio sample rate. Groups become reusable blocks with their own ports.",
+      "details": [
+        "Expression uses a custom parser to compile formulas into an AudioWorklet, with inputs, math functions and the previous output sample.",
+        "MIDI input, sampling, recording, a media library, autosave and .wnodes files support longer sessions. Blocks can contain other blocks.",
+        "Built with React, TypeScript and signals. The node design is based on a layout by CUSTOMITY."
+      ]
+    },
+    "demo": "https://vicimpa.github.io/w-nodes/",
+    "image": "wnodes.jpg",
+    "image_width": 1373,
+    "image_height": 792
+  },
+  {
+    "id": "new-tetris",
+    "name": "New Tetris",
+    "repository": "https://github.com/vicimpa/new-tetris",
+    "tags": [
+      "Preact",
+      "Canvas 2D",
+      "TypeScript"
+    ],
+    "ru": {
+      "title": "Тетрис с реактивным состоянием и частицами",
+      "description": "Моя реализация Tetris с удержанием фигуры, комбо, очисткой линий и звуковыми эффектами. Поле и анимации рисуются через Canvas 2D.",
+      "details": [
+        "Состояние игры связано с интерфейсом через хуки и сигналы.",
+        "Эффекты частиц сопровождают исчезновение линий и другие действия. Проект использует Preact, TypeScript и Vite."
+      ]
+    },
+    "en": {
+      "title": "Tetris with reactive state and particle effects",
+      "description": "My Tetris implementation includes hold, combos, line clearing and sound effects. Canvas 2D renders the board and its animations.",
+      "details": [
+        "Custom hooks and signals connect game state to the interface.",
+        "Particles accompany line clears and other actions. Built with Preact, TypeScript and Vite."
+      ]
+    },
+    "image": "tetris.png",
+    "image_width": 1096,
+    "image_height": 828
+  },
+  {
+    "id": "chatroulette",
+    "name": "Chatroulette",
+    "repository": "https://github.com/vicimpa/chatroulette",
+    "tags": [
+      "Desktop",
+      "Audio routing",
+      "Video"
+    ],
+    "ru": {
+      "title": "Десктопный клиент для работы с видео и звуком",
+      "description": "Неофициальный клиент видеочата с поддержкой виртуальных камер и выбором аудиовыхода. Я собрал его для работы с обработанным видео и маршрутизацией звука в другие приложения.",
+      "details": [
+        "В репозитории есть команды сборки для Windows, Linux и macOS.",
+        "Интерфейс позволяет выбирать устройство вывода звука. Проект полезен как пример интеграции веб-приложения с десктопным окружением."
+      ]
+    },
+    "en": {
+      "title": "A desktop client for video and audio workflows",
+      "description": "An unofficial video chat client with virtual-camera support and audio-output selection. I built it to work with processed video and route sound to other applications.",
+      "details": [
+        "The repository includes build commands for Windows, Linux and macOS.",
+        "The interface allows selecting the audio output device. It explores integrating a web application with a desktop environment."
+      ]
+    }
+  },
+  {
+    "id": "graph-calc",
+    "name": "GraphCalc",
+    "repository": "https://github.com/vicimpa/graph-calc",
+    "tags": [
+      "JavaScript",
+      "Visualization"
+    ],
+    "ru": {
+      "title": "Графики функций, написанных на JavaScript",
+      "description": "Небольшой графический калькулятор, в котором можно задать функцию на JavaScript и увидеть её график. Код функции становится входными данными визуализации.",
+      "details": [
+        "Функция получает числовой аргумент и возвращает число.",
+        "Проект соединяет редактирование кода с визуальным исследованием математических зависимостей."
+      ]
+    },
+    "en": {
+      "title": "Plot functions written in JavaScript",
+      "description": "A small graphing calculator that accepts a JavaScript function and plots its output. The function itself becomes the input to the visualization.",
+      "details": [
+        "Each function accepts a number and returns a number.",
+        "The project connects code editing with visual exploration of mathematical relationships."
+      ]
+    },
+    "demo": "https://vicimpa.github.io/graph-calc/"
+  },
+  {
+    "id": "my-player",
+    "name": "My-Player",
+    "repository": "https://github.com/vicimpa/my-player",
+    "tags": [
+      "Audio",
+      "Browser"
+    ],
+    "ru": {
+      "title": "MP3-плеер в браузере",
+      "description": "Простой веб-плеер для MP3. Один из моих небольших проектов на пересечении интерфейсов и работы со звуком.",
+      "details": [
+        "В репозитории есть исходный код, скриншоты и команды для локального запуска и сборки.",
+        "Онлайн-демо позволяет познакомиться с интерфейсом плеера."
+      ]
+    },
+    "en": {
+      "title": "An MP3 player in the browser",
+      "description": "A simple web player for MP3 audio. One of my smaller projects at the intersection of interface development and sound.",
+      "details": [
+        "The repository includes source code, screenshots and commands for local development and production builds.",
+        "An online demo shows the player interface."
+      ]
+    },
+    "demo": "https://vicimpa.github.io/my-player/"
+  }
+]

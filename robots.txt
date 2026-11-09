@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /site/
+
+Sitemap: https://vicimpa.github.io/sitemap.xml

@@ -1,0 +1,37 @@
+
+<section class="hero frame" id="field" aria-labelledby="hero-title">
+<div class="hero-copy">
+<p class="mono eyebrow">ПОЛЕВОЙ ЖУРНАЛ / 01</p>
+<h1 id="hero-title">Где ставить<br>базу<span>?</span></h1>
+<p class="lede">В моей RTS Kharos строить можно только на камне. Вот отдельный полигон по мотивам игры. Выбери клетку и попробуй поставить штаб.</p>
+<div class="signature"><img src="/assets/avatar.png" alt="Аватар PromiSe#### из GitHub" width="48" height="48"><div><strong>PromiSe####</strong><span>Senior Fullstack TypeScript</span></div></div>
+<a class="jump" href="#work">Что ещё есть в цехе <span aria-hidden="true">↓</span></a>
+</div>
+<figure class="scope">
+<div class="scope-head mono"><span><i></i> KHAROS / ПОЛИГОН</span><span>22 × 22</span></div>
+<div class="scope-viewport">
+<canvas id="terrain" width="760" height="460" aria-label="Полигон Kharos" aria-describedby="terrain-help"></canvas>
+<span class="reticle r1" aria-hidden="true">+</span><span class="reticle r2" aria-hidden="true">+</span><span class="reticle r3" aria-hidden="true">+</span><span class="reticle r4" aria-hidden="true">+</span>
+</div>
+<div class="scope-tools" id="scope-tools" hidden>
+<form id="seed-form"><label for="seed">Сид</label><input id="seed" type="number" inputmode="numeric" min="0" max="999999" required value="217"><button type="submit" aria-label="Применить сид">↵</button></form>
+<button type="button" id="new-seed">Новая карта</button><button type="button" id="view" aria-pressed="false">Вид сверху</button>
+</div>
+<figcaption>
+<ul class="legend"><li style="--chip:#80b0a0">Топь</li><li style="--chip:#f2bf72">Песок</li><li style="--chip:#b1c390">Камень</li><li style="--chip:#e7e2c7">Горы</li></ul>
+<p id="terrain-help" class="sr-only">Стрелки выбирают клетку. Enter или пробел ставит штаб, если клетка подходит.</p>
+<p id="terrain-status" role="status">Штаб можно поставить на камне.</p>
+</figcaption>
+<noscript><p class="no-script">Для управления полигоном нужен JavaScript.</p></noscript>
+</figure>
+</section>
+<section class="work" id="work" aria-labelledby="work-title"><div class="frame">
+<div class="section-index mono"><span>02 / ВЕРСТАК</span><span>13 ПРОЕКТОВ</span></div>
+<div class="work-intro"><h2 id="work-title">Как это<br>собрано<span>.</span></h2><p>Здесь лежат инструменты, игры и эксперименты. Разложил их по вопросам, с которых начиналась работа.</p></div>
+@@PROJECTS@@
+</div></section>
+<section class="about" id="about" aria-labelledby="about-title"><div class="frame">
+<div class="section-index mono"><span>03 / АВТОР</span><span>PromiSe####</span></div>
+<div class="about-grid"><div><h2 id="about-title">С чего всё<br>началось<span>.</span></h2><p>Меня зовут Роман Аленичев, в сети — PromiSe#### (vicimpa). В IT я пришёл, потому что хотел поднять собственный сервер Minecraft. Для этого пришлось разобраться с Linux и PHP. Сейчас я Senior Fullstack TypeScript-разработчик и работаю и с интерфейсами, и с инфраструктурой.</p><p>Звук появился в моей жизни раньше кода. Я пою с детства, работал звукорежиссёром, а теперь проектирую свой цифровой микшер. Вне верстака катаюсь на мотоцикле.</p><details class="cat"><summary>Включить Персиный режим</summary><p>Мурчит, значит билд пройдёт. <span aria-hidden="true">🐾</span></p></details></div>
+<div class="stack"><h3 class="mono">ЧЕМ РАБОТАЮ</h3><dl><div><dt>Сервер</dt><dd>Bun · Elysia · MongoDB · Redis</dd></div><div><dt>Интерфейсы</dt><dd>React · SvelteKit · TypeScript</dd></div><div><dt>Графика</dt><dd>WebGL · Three.js · GLSL</dd></div><div><dt>Реалтайм</dt><dd>WebRTC · WebSocket · SSE</dd></div></dl></div></div>
+</div></section>
