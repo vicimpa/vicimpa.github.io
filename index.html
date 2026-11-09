@@ -1,11 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#222824">
+<meta name="description" content="Роман Аленичев (ViCImPA) — Senior Fullstack TypeScript-разработчик. Pixprite, Kharos, OpenBomber, City Labs, TypeScript-библиотеки и HellCord.">
+<title>ViCImPA / Цех — Роман Аленичев</title>
+<link rel="icon" href="mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="workshop.js" defer></script>
 </head>
 <body>
-  
+<a class="skip" href="#work">К проектам</a>
+<header class="top" id="top"><div class="frame bar">
+<a class="brand" href="#top"><img src="mark.svg" alt="" width="29" height="29"> ViCImPA<span>/ ЦЕХ</span></a>
+<nav aria-label="Навигация"><a href="#field">Полигон</a><a href="#work">Верстак</a><a href="#about">Автор</a></nav>
+<a class="top-git" href="https://github.com/vicimpa">GitHub ↗</a>
+</div></header>
+<main>
+<section class="hero frame" id="field" aria-labelledby="hero-title">
+<div class="hero-copy">
+<p class="mono eyebrow">ПОЛЕВОЙ ЖУРНАЛ / 01</p>
+<h1 id="hero-title">Где ставить<br>базу<span>?</span></h1>
+<p class="lede">В моей RTS Kharos строить можно только на камне. Вот отдельный полигон по мотивам игры. Выбери клетку и попробуй поставить штаб.</p>
+<div class="signature"><img src="mark.svg" alt="" width="36" height="36"><div><strong>Роман Аленичев</strong><span>Senior Fullstack TypeScript</span></div></div>
+<a class="jump" href="#work">Что ещё есть в цехе <span aria-hidden="true">↓</span></a>
+</div>
+<figure class="scope">
+<div class="scope-head mono"><span><i></i> KHAROS / ПОЛИГОН</span><span>22 × 22</span></div>
+<div class="scope-viewport">
+<canvas id="terrain" width="760" height="460" aria-label="Полигон Kharos" aria-describedby="terrain-help"></canvas>
+<span class="reticle r1" aria-hidden="true">+</span><span class="reticle r2" aria-hidden="true">+</span><span class="reticle r3" aria-hidden="true">+</span><span class="reticle r4" aria-hidden="true">+</span>
+</div>
+<div class="scope-tools" id="scope-tools" hidden>
+<form id="seed-form"><label for="seed">Сид</label><input id="seed" type="number" inputmode="numeric" min="0" max="999999" required value="217"><button type="submit" aria-label="Применить сид">↵</button></form>
+<button type="button" id="new-seed">Новая карта</button><button type="button" id="view" aria-pressed="false">Вид сверху</button>
+</div>
+<figcaption>
+<ul class="legend"><li style="--chip:#80b0a0">Топь</li><li style="--chip:#f2bf72">Песок</li><li style="--chip:#b1c390">Камень</li><li style="--chip:#e7e2c7">Горы</li></ul>
+<p id="terrain-help" class="sr-only">Стрелки выбирают клетку. Enter или пробел ставит штаб, если клетка подходит.</p>
+<p id="terrain-status" role="status">Штаб можно поставить на камне.</p>
+</figcaption>
+<noscript><p class="no-script">Для управления полигоном нужен JavaScript.</p></noscript>
+</figure>
+</section>
+<section class="work" id="work" aria-labelledby="work-title"><div class="frame">
+<div class="section-index mono"><span>02 / ВЕРСТАК</span><span>8 ПРОЕКТОВ</span></div>
+<div class="work-intro"><h2 id="work-title">Как это<br>собрано<span>.</span></h2><p>Здесь лежат инструменты, игры и эксперименты. Разложил их по вопросам, с которых начиналась работа.</p></div>
+<div class="bench">
+<div class="project-list" aria-label="Проекты по задачам">
+<div class="route"><h3><span class="mono">А.</span> Как собрать игру и инструменты для неё?</h3><div><button type="button" data-project="pixprite" aria-controls="pixprite" aria-pressed="true">Pixprite</button><button type="button" data-project="openbomber" aria-controls="openbomber" aria-pressed="false">OpenBomber</button></div></div>
+<div class="route"><h3><span class="mono">Б.</span> Как сгенерировать целый мир?</h3><div><button type="button" data-project="kharos" aria-controls="kharos" aria-pressed="false">Kharos</button><button type="button" data-project="citylabs" aria-controls="citylabs" aria-pressed="false">City Labs</button></div></div>
+<div class="route"><h3><span class="mono">В.</span> Что можно вынести в отдельную библиотеку или демо?</h3><div><button type="button" data-project="toolkit" aria-controls="toolkit" aria-pressed="false">vicimpa-library</button><button type="button" data-project="particles" aria-controls="particles" aria-pressed="false">GPU-частицы</button><button type="button" data-project="audio" aria-controls="audio" aria-pressed="false">WebAudio</button></div></div>
+<div class="route"><h3><span class="mono">Г.</span> Где обсуждать и показывать разработки?</h3><div><button type="button" data-project="hellcord" aria-controls="hellcord" aria-pressed="false">HellCord</button></div></div>
+</div>
+<div class="dossiers" aria-live="polite">
+<article id="pixprite" class="dossier">
+<div class="art art-pixel" aria-hidden="true"><span>FIG. 01 · SPRITE STUDY</span><svg viewBox="0 0 310 170" fill="none" shape-rendering="crispEdges"><path fill="#858e51" d="M139 23h45v10h-45zM124 38h75v10h-75zM109 53h105v10H109zM94 68h135v10H94zM79 83h165v10H79zM64 98h195v10H64zM49 113h225v10H49z"/><path fill="#d9f356" d="M142 27h40v8h-40zM127 42h55v8h-55zM112 57h70v8h-70zM97 72h85v8H97zM82 87h100v8H82zM67 102h115v8H67zM52 117h130v8H52z"/><path fill="#f8f2d7" d="M152 28h10v9h-10zM136 43h10v9h-10zM118 74h10v9h-10zM156 58h10v9h-10zM143 89h10v9h-10zM96 103h10v9H96zM123 119h10v9h-10z"/><path fill="#e4a271" d="M144 125h31v24h-31z"/><path stroke="#a4ab78" d="M36 30V17h14m211 0h14v13m0 110v13h-14m-211 0H36v-13"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>Редактор, который вырос из игрового рига</h3><p>Я хотел делать персонажей с игровым ригом и передавать их в движок в своём формате. Из этой задачи вырос Pixprite — редактор пиксель-арта и анимации для браузера и десктопа. Game rig уже работает. Дальше хочу добавить нодовый редактор для процедурных спрайтов.</p><div class="tags"><span>GAME RIG</span><span>TAURI</span><span>MCP</span></div><a class="inline" href="https://github.com/vicimpa/pixprite">Код Pixprite ↗</a></div>
+</article>
+<article id="kharos" class="dossier">
+<div class="art art-map" aria-hidden="true"><span>FIG. 02 · MAP STUDY</span><svg viewBox="0 0 310 170" fill="none"><path d="M20 148 35 96 64 84 75 38 128 22 164 35 188 19 254 36 276 80 293 105 267 138 206 150 164 139 129 159 85 144 54 160z" fill="#4b3b25" stroke="#e5a75f"/><path d="m47 135 10-29 26-10 12-43 31-9 44 18 19-22 49 10 20 40 14 14-21 18-48 10-42-16-33 24-41-14-30 15z" fill="#654e2f" stroke="#e5a75f"/><path d="m92 109 24-39 34 12 28 4 19-27 29 7 18 33-36 18-51-21-25 21z" fill="#88643c" stroke="#e5a75f"/><path d="m63 117 56-14 47 12 63-31" stroke="#f7d3a1" stroke-dasharray="4 4"/><path d="M58 113h9v9h-9zm166-34h9v9h-9z" fill="#f7d3a1"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>Стратегия, где рельеф меняет тактику</h3><p>Многопользовательская браузерная RTS с процедурной картой, экономикой и логистикой. На каменном плато можно строить, а песок ограничивает движение техники. Графика и звук генерируются кодом.</p><div class="tags"><span>RTS</span><span>ПРОЦЕДУРНАЯ ГЕНЕРАЦИЯ</span></div><a class="inline" href="https://github.com/vicimpa/kharos">Код Kharos ↗</a></div>
+</article>
+<article id="openbomber" class="dossier">
+<div class="art art-bomber" aria-hidden="true"><span>FIG. 03 · BLAST STUDY</span><svg viewBox="0 0 310 170" fill="none" shape-rendering="crispEdges"><path fill="#774a35" d="M98 26h28v28H98zm86 0h28v28h-28zM98 116h28v28H98zm86 0h28v28h-28zM55 72h28v28H55zm172 0h28v28h-28z"/><path fill="#ef9664" d="M143 12h24v149h-24zM74 74h162v24H74z"/><path fill="#ffe0a9" d="M150 20h10v132h-10zM83 81h144v10H83z"/><path fill="#242117" stroke="#ffe0a9" stroke-width="2" d="M146 67h18v5h7v7h5v18h-5v7h-7v5h-18v-5h-7v-7h-5V79h5v-7h7z"/><path stroke="#ffe0a9" stroke-width="3" d="M158 67v-8h11v-7"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>Свой Bomberman с мультиплеером</h3><p>OpenBomber — открытая версия классической игры про бомбы и лабиринты. Здесь мне было интересно перенести знакомую механику в сетевую игру, в которую можно играть вместе.</p><div class="tags"><span>МУЛЬТИПЛЕЕР</span><span>OPEN SOURCE</span></div><a class="inline" href="https://github.com/vicimpa/openbomber">Код OpenBomber ↗</a></div>
+</article>
+<article id="toolkit" class="dossier">
+<div class="art art-toolkit" aria-hidden="true"><span>FIG. 04 · MODULE STUDY</span><svg viewBox="0 0 310 170" fill="none" stroke="currentColor"><path d="M45 36h62v36H45zm158 0h62v36h-62zM124 98h62v36h-62zM76 72v44h48m62 0h48V72M107 54h96" stroke-width="2"/><g fill="currentColor" stroke="none" font-family="monospace" font-size="13" text-anchor="middle"><text x="76" y="59">glm</text><text x="234" y="59">rsp</text><text x="155" y="121">input</text></g><path d="M146 54h18m-9-9v18" stroke-width="3"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>Библиотеки, которые забираю из проекта в проект</h3><p>В одном репозитории собираю самостоятельные TypeScript-пакеты. В <code>glm</code> лежит математика для графики, <code>rsp</code> связывает React-компоненты с сигналами, а <code>keyboard</code> читает кнопки и оси ввода для игрового цикла.</p><div class="tags"><span>TYPESCRIPT</span><span>NPM</span></div><a class="inline" href="https://github.com/vicimpa/vicimpa-library">Посмотреть пакеты ↗</a></div>
+</article>
+<article id="citylabs" class="dossier">
+<div class="art art-city" aria-hidden="true"><span>FIG. 05 · CITY STUDY</span><svg viewBox="0 0 310 170" fill="none" stroke="currentColor" stroke-width="1.3"><path d="m18 99 142-72 133 63-141 73z" opacity=".6"/><path d="m42 112 142-74m-116 88 143-75m-116 87 142-75m-115 88 140-76M48 84l133 64M75 70l133 64M104 55l133 64m-104-79 133 65" opacity=".5"/><path d="m79 79 24-12 24 11-24 13zM79 79v29l24 11 24-12V78m-24 13v28m24-65 24-12 24 11-24 13zM127 54v51l24 11 24-12V53m-24 13v50m32-52 19-9 19 9-19 10zM183 64v30l19 9 19-9V64m-19 10v29m-35 16 24-12 24 11-24 13zM167 119v15l24 11 24-12v-15m-24 13v14" fill="#1d332e"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>Город, собранный по правилам</h3><p>City Labs — генератор городов из HellCord. Я показывал проект в ролике про карту 9 × 9 км с тысячами зданий и управление генератором через MCP.</p><div class="tags"><span>ПРОЦЕДУРНАЯ ГЕНЕРАЦИЯ</span><span>MCP</span></div><a class="inline" href="https://github.com/hellcord/city-labs">Репозиторий HellCord ↗</a></div>
+</article>
+<article id="particles" class="dossier">
+<div class="art art-particles" aria-hidden="true"><span>FIG. 06 · PARTICLE STUDY</span><svg viewBox="0 0 310 170" fill="none" stroke="currentColor"><ellipse cx="155" cy="85" rx="120" ry="34" transform="rotate(-16 155 85)" opacity=".3"/><ellipse cx="155" cy="85" rx="103" ry="55" transform="rotate(23 155 85)" stroke-dasharray="2 7"/><path d="M104 49l49 82 53-82" stroke-width="14" stroke-linecap="round" stroke-dasharray=".1 8"/><path d="M63 61h.1m9 48h.1m20-4h.1m18-72h.1m69 14h.1m55 9h.1m7 45h.1m16 17h.1m-61 22h.1m-80-5h.1m12 10h.1m107-62h.1m-35 31h.1m-66-84h.1" stroke-width="4" stroke-linecap="round"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>Логотип из частиц на GPU</h3><p>Небольшой WebGL-эксперимент с системой частиц. Интересная часть здесь — вычисления на GPU, где состояния множества частиц можно обновлять параллельно.</p><div class="tags"><span>WEBGL</span><span>GPU</span></div><a class="inline" href="https://github.com/vicimpa/webgl-logo-particle">Код эксперимента ↗</a></div>
+</article>
+<article id="audio" class="dossier">
+<div class="art art-audio" aria-hidden="true"><span>FIG. 07 · WAVE STUDY</span><svg viewBox="0 0 310 170" fill="none" stroke="currentColor"><path d="M22 85h266M155 24v122" opacity=".45"/><path d="M22 85c12 0 18-52 37-52s25 104 44 104 24-104 44-104 23 104 42 104 25-104 43-104 25 52 56 52" stroke-width="2"/><path d="M22 85h17V64h21V41h21v23h21v21h21v21h21v22h21v-22h21V85h21V64h21V41h21v23h21v21h18" stroke-dasharray="4 3" opacity=".65"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>Песочница для звука в браузере</h3><p>WebAudio Playground — небольшой проект для экспериментов с Web Audio API. На стыке двух моих занятий, разработки и работы со звуком.</p><div class="tags"><span>WEB AUDIO API</span><span>ЭКСПЕРИМЕНТ</span></div><a class="inline" href="https://github.com/vicimpa/webaudio-playground">Код песочницы ↗</a></div>
+</article>
+<article id="hellcord" class="dossier">
+<div class="art art-signal" aria-hidden="true"><span>FIG. 08 · SIGNAL STUDY</span><svg viewBox="0 0 310 170" fill="none" stroke="currentColor"><circle cx="155" cy="85" r="61" stroke-dasharray="2 5"/><circle cx="155" cy="85" r="46"/><circle cx="155" cy="85" r="31"/><path d="M13 85h64l12-9 12 18 12-31 13 48 15-72 14 89 15-67 15 37 14-25 14 12h84" stroke-width="2.5"/></svg><small>ИЛЛЮСТРАЦИЯ</small></div>
+<div class="dossier-copy"><h3>IT-преисподняя без догм</h3><p>В 2021 году мы запустили открытое IT-сообщество в Discord. Сейчас я помогаю рассказывать о HellCord и делаю короткие видео о звуке, коде и проектах участников.</p><div class="tags"><span>DISCORD</span><span>OPEN SOURCE</span></div><a class="inline" href="https://discord.gg/hellcord">Зайти в HellCord ↗</a></div>
+</article>
+</div>
+</div>
+</div></section>
+<section class="about" id="about" aria-labelledby="about-title"><div class="frame">
+<div class="section-index mono"><span>03 / АВТОР</span><span>ViCImPA</span></div>
+<div class="about-grid"><div><h2 id="about-title">С чего всё<br>началось<span>.</span></h2><p>В IT я пришёл, потому что хотел поднять собственный сервер Minecraft. Для этого пришлось разобраться с Linux и PHP. Сейчас я Senior Fullstack TypeScript-разработчик и работаю и с интерфейсами, и с инфраструктурой.</p><p>Звук появился в моей жизни раньше кода. Я пою с детства, работал звукорежиссёром, а теперь проектирую свой цифровой микшер. Вне верстака катаюсь на мотоцикле.</p><details class="cat"><summary>Включить Персиный режим</summary><p>Мурчит, значит билд пройдёт. <span aria-hidden="true">🐾</span></p></details></div>
+<div class="stack"><h3 class="mono">ЧЕМ РАБОТАЮ</h3><dl><div><dt>Сервер</dt><dd>Bun · Elysia · MongoDB · Redis</dd></div><div><dt>Интерфейсы</dt><dd>React · SvelteKit · TypeScript</dd></div><div><dt>Графика</dt><dd>WebGL · Three.js · GLSL</dd></div><div><dt>Реалтайм</dt><dd>WebRTC · WebSocket · SSE</dd></div></dl></div></div>
+</div></section>
+<footer class="contact" id="contact"><div class="frame">
+<div class="section-index mono"><span>04 / КОНТАКТЫ</span><a href="#top">НАВЕРХ ↑</a></div>
+<div class="contact-grid"><h2>На связи<span>.</span></h2><div class="contact-links"><a href="https://github.com/vicimpa">GitHub <span>Код и проекты ↗</span></a><a href="https://career.habr.com/vic_dev">Хабр Карьера <span>Профиль ↗</span></a><a href="https://discord.gg/hellcord">HellCord <span>Сообщество ↗</span></a></div></div>
+<div class="credits mono"><span>РОМАН АЛЕНИЧЕВ / ViCImPA</span><span>КОНЕЦ СМЕНЫ ■</span></div>
+</div></footer>
+</main>
 </body>
 </html>
