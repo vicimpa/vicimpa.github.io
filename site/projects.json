@@ -30,6 +30,39 @@
     "image_height": 960
   },
   {
+    "id": "yummywatch",
+    "name": "YummyWatch",
+    "repository": "https://github.com/vicimpa/yummywatch",
+    "download": "https://github.com/vicimpa/yummywatch/releases/latest",
+    "tags": [
+      "TAURI",
+      "PREACT",
+      "RUST",
+      "DISCORD"
+    ],
+    "image": "yummywatch.png",
+    "image_width": 1440,
+    "image_height": 900,
+    "ru": {
+      "title": "Аниме под рукой",
+      "description": "Плеер аниме для macOS, Windows и Linux с каталогом YummyAnime, выбором озвучки и качества, коллекцией и сохранением прогресса. Discord показывает название аниме, серию и время просмотра.",
+      "details": [
+        "Каталог, поиск, расписание и коллекция собраны в одном приложении. Можно выбрать источник, озвучку и качество, менять скорость и продолжать с сохранённого места.",
+        "Rich Presence передаёт в Discord обложку, серию и нативную полосу прогресса. Вне просмотра видно, где пользователь находится и что ищет. Отображение активности можно отключить в настройках.",
+        "Интерфейс на Preact и TypeScript, десктопная оболочка на Tauri и Rust. Установщики для macOS, Windows, Linux и Arch Linux доступны в релизах на GitHub."
+      ]
+    },
+    "en": {
+      "title": "Anime, close at hand",
+      "description": "An anime player for macOS, Windows and Linux with the YummyAnime catalog, voice and quality selection, a personal collection and saved playback progress. Discord shows the title, episode and viewing progress.",
+      "details": [
+        "Browse the catalog, search, check the schedule and manage a collection in one app. Choose a source, voice track and quality, adjust playback speed and resume where you left off.",
+        "Discord Rich Presence includes artwork, episode details and a native progress bar. Outside playback, it shows the current section and search query. Activity sharing can be turned off in settings.",
+        "Built with Preact and TypeScript, with Tauri and Rust on desktop. Installers for macOS, Windows, Linux and Arch Linux are available in GitHub releases."
+      ]
+    }
+  },
+  {
     "id": "kharos",
     "name": "Kharos",
     "repository": "https://github.com/vicimpa/kharos",

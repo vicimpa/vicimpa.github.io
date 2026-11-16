@@ -21,7 +21,7 @@ TEXT = {
         "profile": "Профиль", "community": "Сообщество", "end": "КОНЕЦ СМЕНЫ ■",
         "title": "PromiSe#### — Роман Аленичев · TypeScript, игры и аудио",
         "description": "Портфолио Романа Аленичева, PromiSe#### (vicimpa). Senior Fullstack TypeScript-разработчик. Pixprite, WebAudio Nodes, OpenBomber и другие открытые проекты.",
-        "questions": ["Как собрать игру и инструменты для неё?", "Как сгенерировать целый мир?", "Как создавать и слушать звук?", "Что вынести в библиотеку или демо?", "Как соединять людей?"],
+        "questions": ["Как собрать игру и инструменты для неё?", "Как сгенерировать целый мир?", "Как работать со звуком и видео?", "Что вынести в библиотеку или демо?", "Как соединять людей?"],
     },
     "en": {
         "name": "Roman Alenichev", "workshop": "WORKSHOP", "brand": "Workshop",
@@ -35,13 +35,13 @@ TEXT = {
         "profile": "Profile", "community": "Community", "end": "END OF SHIFT ■",
         "title": "PromiSe#### — Roman Alenichev · TypeScript, games and audio",
         "description": "Roman Alenichev, PromiSe#### (vicimpa), Senior Fullstack TypeScript developer. Explore Pixprite, WebAudio Nodes, OpenBomber and more open-source projects.",
-        "questions": ["How do you build a game and its tools?", "How do you generate an entire world?", "How do you create and play sound?", "What belongs in a library or demo?", "How do you connect people?"],
+        "questions": ["How do you build a game and its tools?", "How do you generate an entire world?", "How do you work with sound and video?", "What belongs in a library or demo?", "How do you connect people?"],
     },
 }
 GROUPS = [
     ["pixprite", "openbomber", "new-tetris"],
     ["kharos", "citylabs"],
-    ["w-nodes", "audio", "my-player"],
+    ["yummywatch", "w-nodes", "audio", "my-player"],
     ["toolkit", "particles", "graph-calc"],
     ["hellcord", "chatroulette"],
 ]
@@ -158,6 +158,9 @@ def art(project, lang):
 def actions(project, lang, detail=False):
     text = TEXT[lang]
     links = f'<a class="inline" href="{project["repository"]}">{text["source"]} ↗</a>'
+    if project.get("download"):
+        label = "Скачать приложение" if lang == "ru" else "Download app"
+        links = f'<a class="inline" href="{project["download"]}">{label} ↗</a>' + links
     if project.get("demo"):
         links += f'<a class="inline" href="{project["demo"]}">{text["demo"]} ↗</a>'
     if not detail:
@@ -195,7 +198,7 @@ def save(url, content):
 
 urls = []
 for lang in TEXT:
-    home = (ROOT / "site" / f"home.{lang}.html").read_text().replace("@@PROJECTS@@", bench(lang))
+    home = (ROOT / "site" / f"home.{lang}.html").read_text().replace("@@PROJECTS@@", bench(lang)).replace("@@PROJECT_COUNT@@", str(len(PROJECTS)))
     save(route(lang), document(lang, home))
     urls.append(BASE + route(lang))
     for project in PROJECTS:
